@@ -53,12 +53,12 @@ body{
 }
 
 .planos-item {
-    flex: 1 0 260px;
+    flex: 1 0 315px;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.250);
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    min-width: 260px;
+    max-width: 380px;
     background-color: white;
     height: 500px;
 }
