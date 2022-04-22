@@ -1,0 +1,172 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --yellow: #ffcc29;
+    --blue: #1d539e;
+    --gray: #828799;
+    --page-background: #f9fbfc;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--page-background);
+    height: 100vh;
+}
+/* test */
+
+.absolute{
+    position: relative;
+    top: -20vh;
+    
+}
+/* Cabeçalho */
+
+.header {
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    height: 35vh;
+    padding-top: 10vh;
+    
+}
+
+.header h1{
+    font-size: 2.5em;
+
+}
+/* Planos */
+
+.planos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+    padding: 60px;
+    max-width: 1400px;
+}
+
+.planos-item {
+    flex: 1 0 260px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.250);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    min-width: 260px;
+    background-color: white;
+    height: 500px;
+}
+
+.planos-item h2 {
+    font-size: 1.2em;
+    text-align: left;
+    margin: 10px;
+
+}
+
+.planos-item p {
+    margin: 10px;
+    color: var(--gray);
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.preco {
+    color: black;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.preco-menor {
+    color: black;
+    font-weight: bold;
+}
+
+.preco-mes {
+    color: var(--gray);
+}
+
+.planos-item ul {
+
+    max-width: 300px;
+    margin: 15px auto;
+    font-size: 1.25em;
+    font-style: italic;
+    color: #7c7c7c;
+    list-style-type: '\2714\00A0\00A0';
+    padding-left: 20px;
+}
+
+.planos-item li {
+    margin-bottom: 20px;
+
+}
+
+.assinar-normal {
+    display: flex;
+
+}
+
+.planos-item a {
+    flex: 1 1 170px;
+    
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 1.5em;
+    text-align: center;
+    border: 3px solid var(--blue);
+    border-radius: 10px;
+
+}
+
+.assinar-meio {
+    display: flex;
+    background-color: var(--blue);
+    border-radius: 10px;
+}
+
+.assinar-meio a {
+    color: white;
+    
+}
+
+.basico-cabecalho-relative{
+    position: relative;
+    height: 10%;
+    
+}
+
+.basico-cabecalho{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--yellow);
+    left: -20px;
+    top: -30px;
+    right: -20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.basico-cabecalho h2 {
+    padding: 10px;
+    color: var(--blue);
+}
+
+.basico-cabecalho span{
+    flex: 1;
+    align-self: center;
+    max-width: 100px;
+    background-color: var(--blue);
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 8px;
+    color: white;
+    margin-right: 10px;
+    padding-bottom: 10px;
+}
