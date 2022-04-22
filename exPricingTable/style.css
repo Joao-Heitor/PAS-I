@@ -100,6 +100,7 @@ body{
     color: #7c7c7c;
     list-style-type: '\2714\00A0\00A0';
     padding-left: 20px;
+    height: 180px;
 }
 
 .planos-item li {
@@ -107,14 +108,15 @@ body{
 
 }
 
+/* Assinar */
+
 .assinar-normal {
     display: flex;
-
+  
 }
 
 .planos-item a {
     flex: 1 1 170px;
-    
     text-decoration: none;
     color: var(--blue);
     font-size: 1.5em;
