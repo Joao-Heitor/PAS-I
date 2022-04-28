@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head></head>
+ <body>
+   <h1>Ola Mundo!</h1>
+   <script>
+     let p = fetch("https://swapi.dev/api/starships/?page=2")
+       .then((response) => response.json()) // response.json() é equivalente a return response.json()
+       .then((data) => console.log("Lista de naves: ", data.results)) // equivalente a 'function print(data) { console.log('Lista de naves: ', data.results) }'
+       .catch((e) => console.log(e));
+ 
+     async function callAsync() {
+       try {
+         let res = await fetch("https://swapi.dev/api/species/?page=2");
+         let speciesList = await res.json();
+         console.log("Lista de espécies");
+         console.log(speciesList.results);
+       } catch (error) {
+         console.log(error);
+       }
+     }
+     callAsync(); // Precisamos chamar desta forma pois o uso de await exige um async anterior.
+   </script>
+ </body>
+</html>
