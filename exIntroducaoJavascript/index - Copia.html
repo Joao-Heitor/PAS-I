@@ -19,22 +19,34 @@
           const planetsFilterFrozen = planets.filter(item => item.climate.includes("frozen"))
           console.log("Planetas com clima gelado: ", planetsFilterFrozen)
           //temperate
-          const planetsFilterTemperate = planets.filter(item => item.climate.includes("temperate"))
+          const planetsFilterTemperate = planets.filter(item => item.climate.includes("temperate")).map((item) => item.name)
           //mapTemperate
-          const nomesPlanetasTemperate = planets.map((item) => ({name: item.name, temperate: item.climate}))
-       
-          const nomesPlanetasTemperate2 = planets.map(function(item){
-                if(item.name == planetsFilterTemperate.name){
-                  return {name: item.name, temperate: "Sim"}
-                }else{
-                  return {name: item.name, temperate: "Não"}
-                }             
-            }) 
+          const nomesPlanetasTemperate = planets.map(function (item) {
+            console.log(planetsFilterTemperate.includes(item.name))
+            if (planetsFilterTemperate.includes(item.name)) {
+              return { name: item.name, temperate: "Sim" }
+            } else {
+              return { name: item.name, temperate: "Não" }
+            }
+          })
           //reduceTemeperate
-          const nomesPlanetas = planets.map((nome) => nome.name)
-          
-      
+          const qntPlanetsTemperate = nomesPlanetasTemperate.reduce(function(total, item){
+
+            if(item.temperate == "Sim"){
+              total ++
+            }
+            return total 
+          })
+          console.log(qntPlanetsTemperate)
+
+          //tempereteTest
+          const planetsFilterTemperate2 = planets.filter(item => item.climate.includes("temperate")).map((item) => item.name)
+          //mapTemperateTest
+          const nomesPlanetasTemperate2 = planets.map((item) => ({ name: item.name, temperate: item.climate }))
+
           console.log("Planetas com clima temperado: ", planetsFilterTemperate)
+          console.log("Planetas com clima temperado2: ", planetsFilterTemperate2)
+
           // console.log("Nome de planetas: ", nomesPlanetas)
           console.log("Nome de planetas com clima temperado: ", nomesPlanetasTemperate)
           console.log("Teste: ", nomesPlanetasTemperate2)
@@ -44,11 +56,11 @@
         })
       })
       .catch((e) => console.log("Erro", e));
-  
 
-      console.log("-------------------------")
-     
-     
+
+    console.log("-------------------------")
+
+
 
     //Maganez 
     //  const getResults = async () => {
