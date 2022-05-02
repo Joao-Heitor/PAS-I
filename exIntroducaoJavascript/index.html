@@ -3,32 +3,21 @@
  <head></head>
  <body>
    <h1>Ola Mundo!</h1>
-   <script>
+   <script> 
 
-     
-let p = fetch("https://swapi.dev/api/planets/?page=2")
-       .then((response) => response.json())
-       .then((data) => data.results)
-       .then((data) => {
-          console.log("Lista de planetas: ", data)
-          return data
-        })
-       .then((data) => data.filter((results) => results.climate == "frozen"))
-       .then((result) => console.log("Lista de Planetas com clima frozen: ", result))
-       p.then(data => data.results.filter(item => item.climate.includes("temperate")))
-       .then((result) => console.log("Lista de Planetas com clima temperate: ", result))
-       .catch((error) => console.log(error))
-//data => data.results.filter(item => item.climate.includes("temperate")))
-     async function callAsync() {
-       try {
-         let res = await fetch("https://swapi.dev/api/species/?page=2")
-         let speciesList = await res.json()
-         console.log("Lista de espécies", speciesList.results)
-       } catch (error) {
-         console.log(error)
-       }
-     }
-     callAsync();
+  const p = "https://swapi.dev/api/planets/?page=2"
+  const getResults = async () => {
+    try{
+          const results = await fetch(p)
+              .then((response) => response.json())
+              .then(data => data.results)
+          return results;
+      }catch (error) {
+         console.log(error);
+    }
+  }
+    console.log(getResults())
+
    </script>
  </body>
 </html>
