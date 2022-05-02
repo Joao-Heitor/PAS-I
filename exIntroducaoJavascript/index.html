@@ -5,18 +5,76 @@
    <h1>Ola Mundo!</h1>
    <script> 
 
+  const c = "https://swapi.dev/api/people/?page=2"
   const p = "https://swapi.dev/api/planets/?page=2"
+
+  //Parte 1
+fetch(p)
+  .then(res => {
+    res.json().then(data => {
+
+      //json
+      const planets = data.results
+      console.log("Resultado json:", planets)
+
+      //frozen
+      const planetsFilterFrozen = planets.filter(item => item.climate.includes("frozen"))
+      console.log("Planetas com clima frozen: ", planetsFilterFrozen)
+
+      //temperate
+      const planetsFilterTemperate = planets.filter(item => item.climate.includes("temperate")).map((item) => item.name)
+
+      //mapTemperate
+      const nomesPlanetasTemperate = planets.map(function (item) {
+        if (planetsFilterTemperate.includes(item.name)) {
+          return { name: item.name, temperate: "Sim" }
+        } else {
+          return { name: item.name, temperate: "Não" }
+        }
+      })
+      console.log("Planetas com clima temperate: ", nomesPlanetasTemperate)
+
+      //reduceTemeperate
+      const qntPlanetsTemperate = nomesPlanetasTemperate.reduce((total) => total = nomesPlanetasTemperate.filter(item => (item.temperate == "Sim")).length)
+      console.log("Quantidade de Planetas com clima temperate: ",qntPlanetsTemperate)
+    })
+  })
+  .catch((e) => console.log("Erro", e));
+
+//Parte 2
+
+
   const getResults = async () => {
     try{
-          const results = await fetch(p)
-              .then((response) => response.json())
-              .then(data => data.results)
-          return results;
+      const results = await fetch(c)
+      let persoangens = await results.json();
+      const listaPersonagens = persoangens.results;
+
+      console.log ("-------------------------")
+      //json
+      console.log("Resultado jason: ", listaPersonagens)
+
+      //PersonagenCorDePeleVerde
+      const personagenCorDePeleVerde = listaPersonagens.filter((item) => (item.skin_color == 'green'))
+      console.log("Lista personagens pele cor verde: ", personagenCorDePeleVerde)
+
+      //PesonagensMassaMaiorQue100
+      const pesonagensMassaMaiorQue100 = listaPersonagens.filter((item) => (item.mass >= 100))
+      console.log("Lista personagens que tem massa maior que 100: ", pesonagensMassaMaiorQue100)
+      
+      //PersonagensAlturaMaiorOuIgual180
+      const personagensAlturaMaiorOuIgual180 = listaPersonagens.reduce((total) => total = listaPersonagens.filter(item => (item.height >= 180)).length)
+      console.log("Quantidade de personagens que tem altura maior ou igual a 180: ", personagensAlturaMaiorOuIgual180)
+
+      //nomePersonagens
+      const nomePersonagens = listaPersonagens.map((item) => item.name)
+      console.log("Nome dos personagens: ", nomePersonagens)
       }catch (error) {
          console.log(error);
     }
   }
-    console.log(getResults())
+
+  getResults()
 
    </script>
  </body>
