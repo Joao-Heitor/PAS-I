@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API IBGE</title>
     <script src="main.js"></script>
+
+    <link rel="stylesheet" href="style.css">
 <body>
-    <h1>Títtulos Dados IBGE</h1>
-    <h2>Escolha o Estado Desejado</h2>
 
-    <select id="Estados">
-        <option value="">
-            Carregando o estado...
-        </option>
-    </select>
+    <!-- Gerado no carregammento -->
+    <div>
+        <h1>Títulos Dados IBGE</h1>
+        <h2>Escolha o Estado Desejado</h2>
+        <select id="Estados" onchange="getMunicipio()">
+            <option value="">
+                Escolha o estado...
+            </option>
+        </select>
+    </div>
 
-    <button type="button" onclick="getMunicipio()">
-      Buscar
-    </button>
+    <!-- Vai ser gerado com interação -->
 </body>
 </html>
