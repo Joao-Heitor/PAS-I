@@ -77,7 +77,7 @@ const getMunicipio = async () => {
                     const liRe = document.createElement("li")
                     liMicro.innerText = `Nome microrregião: ${cidade.microrregiao.nome}`
                     liMeso.innerText = `Nome mesorregião: ${cidade.microrregiao.mesorregiao.nome}`
-                    liRe.innerText = `Nome regiao: ${cidade.microrregiao.nome}`
+                    liRe.innerText = `Nome regiao: ${cidade.microrregiao.mesorregiao.UF.regiao.nome}`
 
                     ul.appendChild(liMicro)
                     ul.appendChild(liMeso)
