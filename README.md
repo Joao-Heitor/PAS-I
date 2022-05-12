@@ -7,4 +7,5 @@ Vizualizar exercício na prática:
     <li><a href="https://joao-heitor.github.io/PAS-I/exPricingTable" target="_blank">exPricingTable</a></li>
     <li><a href="https://joao-heitor.github.io/PAS-I/exIntroducaoJavascript" target="_blank">exIntroducaoJavascript</a></li>
     <li><a href="https://joao-heitor.github.io/PAS-I/exIntroducaoAoDOM" target="_blank">exIntroducaoAoDOM</a></li>
+    <li><a href="https://joao-heitor.github.io/PAS-I/exForms/cadastro.html" target="_blank">exForms</a></li>
 </ul>
