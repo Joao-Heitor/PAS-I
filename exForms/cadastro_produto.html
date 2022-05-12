@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/componentes/inputs.css">
     <link rel="stylesheet" href="./assets/css/componentes/botao.css">
     <link rel="stylesheet" href="./assets/css/cadastro_produto.css">
+    
 </head>
 <body>
     <header class="cabecalho container">
@@ -30,16 +31,19 @@
         <section class="cartao cadastro">
             <h1 class="cartao__titulo">Cadastrar um produto</h1>
             <form action="./cadastro_produto_concluido.html" class="flex flex--coluna">
+                <!-- Nome -->
                 <div class="input-container">
-                    <input name="nome" id="nome" class="input" type="text" placeholder="Nome">
+                    <input name="nome" id="nome" class="input" type="text" placeholder="Nome" required>
                     <label class="input-label" for="nome">Nome</label>
                     <span class="input-mensagem-erro">Este campo não está válido</span>
                 </div>
+                <!-- Preco -->
                 <div class="input-container cadastro__preco-container">
-                    <input name="preco" id="preco" class="input" type="text" placeholder="Preço">
+                    <input name="preco" id="preco" class="input" type="text" placeholder="Preço" inputmode="numeric" onkeyup="send(event)" value="0,00">
                     <label class="input-label" for="preco">Preço</label>
                     <span class="input-mensagem-erro">Este campo não está válido</span>
                 </div>
+                <!-- Descrição -->
                 <div class="input-container cadastro__descricao-container">
                     <input class="input" name="descricao" id="descricao" placeholder="Descrição">
                     <label class="input-label" for="descricao">Descrição</label>
@@ -49,5 +53,31 @@
             </form>
         </section>
     </main>
+    <script src="./js/app.js" type="module"></script>
+    <script src="node_modules/simple-mask-money/lib/simple-mask-money.js"></script>
+    <script>
+      // Default configuration  
+      const options = {
+        allowNegative: false,
+        negativeSignAfter: false,
+        prefix: 'R$ ',
+        suffix: '',
+        fixed: true,
+        fractionDigits: 2,
+        decimalSeparator: ',',
+        thousandsSeparator: '.',
+        cursor: 'move'
+      };
+
+      // set mask on your input you can pass a querySelector or your input element and options
+      let input = SimpleMaskMoney.setMask('#preco', options);
+
+      // Your send method
+      send = (e) => {
+        if (e.key !== "Enter") return;
+        // This method return value of your input in format number to save in your database
+        console.log( input.formatToNumber() );
+      }
+    </script>
 </body>
 </html>

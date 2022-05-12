@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./assets/css/componentes/cartao.css">
     <link rel="stylesheet" href="./assets/css/componentes/inputs.css">
     <link rel="stylesheet" href="./assets/css/componentes/botao.css">
+    
 </head>
 <body>
     <main class="container flex flex--coluna flex--centro">
@@ -79,6 +80,19 @@
                     <div class="input-container">
                         <input name="estado" id="estado" class="input" type="text" placeholder="Estado" data-tipo="estado" required>
                         <label class="input-label" for="estado">Estado</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="formulario__legenda">Contato</legend>
+                    <div class="input-container">
+                        <input name="telefone" id="telefone" class="input" type="text" placeholder="telefone" pattern="\(?[\d]{2}\)?[\d]{4,5}-?[\d]{4}" data-tipo="telefone" required>
+                        <label class="input-label" for="telefone">Telefone</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                    <div class="input-container">
+                        <input name="instagram" id="instagram" class="input" type="text" placeholder="instagram" data-tipo="instagram" pattern="@[a-z 0-9._-]{5,30}" required >
+                        <label class="input-label" for="instagram">Instagram</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                 </fieldset>
