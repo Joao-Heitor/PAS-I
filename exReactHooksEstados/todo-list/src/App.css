@@ -1,0 +1,63 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Nunito", Helvetica, sans-serif;
+    color: black;
+    box-sizing: border-box;
+}
+.divzona{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: #8B94D9;
+    align-items: center;
+    margin: 10px;
+    border-radius: 15px;
+    margin: auto;
+    
+}
+
+ul{
+    border: solid black 2px;
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 390px;
+    background-color: #6A71A6;
+}
+
+li{
+    padding: 10px 10px 5px 0px;
+    list-style: none;
+}
+
+form{
+    padding-top: 20px;
+    min-width: 300px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+input{
+    min-width: 100px;
+}
+
+.off{
+ text-decoration: none;
+ 
+}
+
+.on{
+ text-decoration: line-through;
+ color: red;
+}
+
+.desbanido{
+    text-decoration: none;
+    
+   }
+   
+.banido{
+    text-decoration: line-through;
+    
+}
