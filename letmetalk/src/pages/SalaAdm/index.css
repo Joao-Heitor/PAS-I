@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto';
+    box-sizing: border-box;
+}
+
+.div-content {
+    padding-top: 80px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.perguntas-li{
+    list-style: none;
+    max-width: 800px;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.150);
+    background-color: #fefefe;
+    margin-bottom: 10px;
+}

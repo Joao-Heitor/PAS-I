@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap');
+
+.criar-sala {
+    font-family: 'Roboto';
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    flex-wrap: wrap;
+}
+
+.menu {
+    display: flex;
+    flex: 2 1 300px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.img-home-logo {
+    padding-bottom: 100px;
+}
+
+.img-home {
+    padding-right: 10px;
+}
+
+.form-criar-sala {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-criar-sala {
+    margin-top: 20px;
+    width: 450px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    font-size: 18pt;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    background-color: #835AFD;
+}
+
+.input-criar-sala {
+    text-align: start;
+    width: 450px;
+    font-size: 18pt;
+    border: 3px solid #A8A8B3;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+h2{
+    margin-bottom: 30px;
+}

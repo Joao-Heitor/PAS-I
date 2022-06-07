@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap');
+
+.div-home {
+    font-family: 'Roboto';
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    flex-wrap: wrap;
+}
+
+.div-home-criar-sala {
+    padding: 10px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18pt;
+    border: 3px solid #A8A8B3;
+    border-radius: 8px;
+    justify-content: space-between;
+    width: 450px;
+    text-align: center;
+}
+
+.img-home-logo {
+    padding-bottom: 100px;
+}
+
+.img-home {
+    padding-right: 10px;
+}
+
+.p-divisor {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 3px;
+    text-align: center;
+    width: 200px;
+    border-top:  solid #A8A8B3;
+    border-bottom:  solid #A8A8B3;
+}
+
+.form-home-entrar-sala {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-criar {
+    text-decoration: none;
+    color: black;
+
+}
+
+.link-entrar {
+    margin-top: 20px;
+    width: 450px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    font-size: 18pt;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    background-color: #835AFD;
+    
+}
+
+.disable{
+    margin-top: 20px;
+    width: 450px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    font-size: 18pt;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    background-color: #dbdcdd;
+    pointer-events: none;
+}
+
+.input-home-entrar-sala {
+    text-align: center;
+    width: 450px;
+    font-size: 18pt;
+    border: 3px solid #A8A8B3;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.disabled-link {
+    
+  }
