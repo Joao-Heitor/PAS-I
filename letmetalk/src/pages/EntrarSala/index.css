@@ -56,3 +56,23 @@
     position: absolute;
     top: 95%;
 }
+
+.perguntas-li{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.button-like{
+    border: none;
+    cursor: pointer;
+    background-color: #fefefe;
+    
+}
+
+.button-like:disable{
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    
+}

@@ -22,3 +22,9 @@
     background-color: #fefefe;
     margin-bottom: 10px;
 }
+
+.button-excluir{
+   border: none; 
+   background-color: #fefefe;
+   cursor: pointer;
+}
